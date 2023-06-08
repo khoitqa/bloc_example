@@ -1,6 +1,7 @@
 import 'package:bloc_example/bloc_cubit_model/bloc_model/counter/counter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BlocSelectorWidget extends StatelessWidget {
   const BlocSelectorWidget({Key? key}) : super(key: key);
@@ -47,7 +48,7 @@ class BlocSelectorWidget extends StatelessWidget {
                   // tooltip: 'Increment',
                   icon: const Icon(Icons.add),
                 ),
-                const SizedBox(width: 20,),
+                 SizedBox(width: 20.sp,),
                 IconButton(
                   onPressed: () {
                     context.read<CounterBloc>().add(CounterDecrement(1));
